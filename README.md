@@ -1,1 +1,1 @@
-# Maximal_Near_Cliques
+# directed-k-plex
