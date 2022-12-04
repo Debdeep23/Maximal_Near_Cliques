@@ -9,6 +9,7 @@
 #include <fstream>
 #include <bits/stdc++.h>
 
+
 graph::graph() {
 	// TODO Auto-generated constructor stub
 	this->max_degree = INT_MIN;
@@ -25,6 +26,7 @@ graph::graph(const graph &g){
 	vertex_degree = g.vertex_degree;
 	vertex_set = g.vertex_set;
 	adj_mat = g.adj_mat;
+    degen = g.degen;
 }
 
 
@@ -163,8 +165,11 @@ vector<int> graph::vertex_list(){
 	return lst;
 }
 
+
 vector<int>& graph::ngh(int u){
-	
+
+
+
 	return adj[u];
 
 }
