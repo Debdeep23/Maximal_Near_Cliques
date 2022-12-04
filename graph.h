@@ -3,6 +3,7 @@
 #include <vector>
 #include <set>
 #include <unordered_map>
+#include<bits/stdc++.h>
 #include <unordered_set>
 using namespace std;
 
@@ -11,6 +12,7 @@ using namespace std;
 
 #ifndef GRAPH_H_
 #define GRAPH_H_
+
 
 class graph {
 public:
@@ -22,6 +24,8 @@ public:
 	int max_degree;
 	//vector<vector<int>> adj;
 	unordered_map<int, vector<int>> adj;
+   // map<int , unordered_set<int>>adj_list;
+    map<int,int>degen;
 	unordered_map<int, int> vertex_degree;
 	unordered_set<long long int> adj_mat;
 	set<int> vertex_set;
@@ -34,6 +38,7 @@ public:
     bool is_edge(int, int);
 	long long int hash(int , int);
 	vector<int>& ngh(int);
+    //map<int,unordered_set<int>>& Adj_List();
 };
 
 #endif /* GRAPH_H_ */
