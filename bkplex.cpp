@@ -4,7 +4,7 @@
 #include <cassert>
 
 
-
+//WITH DEGENERACY AND WITHOUT DEGENERACY ORDERING AS WELL
 
 
 bkplex::bkplex() {
@@ -283,11 +283,12 @@ void bkplex::run(){
 
 
 
-    //vector<int>c will give the one with generacy ordering
+    //vector<int>c will give the one with degeneracy ordering
 	
 	printf("[%d]:Initialization completed\n", __LINE__);
 
-	bkrec(p, cc, x);
+	bkrec(p, cc, x); //call for rec with degeneracy ordering
+	//bkrec(p , c , x); //call if you want without degeneracy ordering and comment upper one
 
 }
 
