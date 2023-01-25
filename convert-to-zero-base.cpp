@@ -72,19 +72,22 @@ void readEdgeListFile(const char *filepath){
 			}
 
 			if(seen_edges.find(std::make_pair(u, v)) != seen_edges.end())
+			{
+				//printf("Edge is aleady considered\n");
 				continue;
+			}
 
 			seen_edges.insert(std::make_pair(u, v));
 
 			//printf("%d %d\n", u, v);
 
-			if(u == v)
-				exit(1);
+			if(u == v){
+				printf("loop\n");
+				continue;
+			}
 
 
 			outdata << u << " " << v << std::endl;
-
-
 		}
 	}
 }
@@ -100,7 +103,7 @@ static int fileSuffixPos(char * filepath){
 void promot() {
 	printf("convert-to-zero-base txtfile [zero-base-file]\n");
 }
-/*
+
 int main(int argc, char **argv) {
 
 	char txtFilePath[FILELEN] = "\0";
@@ -133,4 +136,4 @@ int main(int argc, char **argv) {
 
 
 
-}*/
+}

@@ -12,13 +12,13 @@ class bkplex {
 	int k;
     int d;
 	unsigned long maximal_k_plex_count;
-	void bkrec(vector<int> , vector<int> , vector<int> );
+	void bkrec(vector<int>& , vector<int>& , vector<int>& );
 	bool is_k_plex(vector<int> , int);
     bool is_near_clique(vector<int> , int );
     vector<int> degeneracy();
 	int *degree_in_p;
     int no_of_disconnection;
-    int near_clique_count;
+    long int near_clique_count;
     int maximal_size;
 
 public:

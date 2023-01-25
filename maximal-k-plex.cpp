@@ -12,13 +12,23 @@ int main(int argc , char **argv) {
 
 	graph g;
 	g.read_edge_list(argv[1]);
+
+	int k=1;
+
+	printf("\nExperiment with degeneracy ordering of the vertices\n");
+
+	printf("\nInput file: %s\n", argv[1]);
+	printf("\nNumber of vertices: %d\n", g.n);
+	printf("\nNumber of edges: %d\n", g.m);
+
+	printf("value of k: %d\n", k);
     //input(g);
     //value of k we are reading ?
     //cout<<argv[1]<<endl;
 	printf("Reading graph completed\n");
     //k = 2 , k = 3 try
 
-	bkplex algo(g, 2 , 2);
+	bkplex algo(g, k , 2);
 	
 	printf("constructor called\n");
     auto start = high_resolution_clock::now();
